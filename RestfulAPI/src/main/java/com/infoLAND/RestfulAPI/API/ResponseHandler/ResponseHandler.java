@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class ResponseHandler {
-    public static ResponseEntity<Object> generateCustomResponse(String msg, HttpStatus status, Optional<Object> data) {
+    public ResponseEntity<Object> generateCustomResponse(String msg, HttpStatus status, Optional<Object> data) {
         Map<String, Object> map = new HashMap<>();
         if (data.isPresent()) map.put("data", data);
         map.put("message", msg);
